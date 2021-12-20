@@ -11,7 +11,7 @@ RUN \
     && if [[ "${BUILD_ARCH}" = "armv7" ]]; then ARCH="arm"; fi \
     && if [[ "${BUILD_ARCH}" = "i386" ]]; then ARCH="386"; fi \
     && sudo apk add --no-cache libc6-compat yq \
-    && sudo wget -O /usr/local/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64.deb && chmod +x /usr/local/bin/cloudflared
+    && sudo wget -O /usr/local/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && chmod +x /usr/local/bin/cloudflared
 RUN cloudflared -v
 
 
