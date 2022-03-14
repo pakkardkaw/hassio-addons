@@ -3,7 +3,7 @@ FROM $BUILD_FROM
 
 ARG BUILD_ARCH
 RUN \
-    CVERSION="latest/download" \
+    CVERSION="2022.3.1" \
     ARCH="${BUILD_ARCH}" \
     && if [[ "${BUILD_ARCH}" = "aarch64" ]]; then ARCH="arm64"; fi \
     && if [[ "${BUILD_ARCH}" = "amd64" ]]; then ARCH="amd64"; fi \
